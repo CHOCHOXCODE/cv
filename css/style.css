@@ -15,6 +15,7 @@
     --footer : #212a4a;
     --black : #060b1b;
     --twitter : #4ac7ec;
+    --linkin : #0077B5;
     --dribble : #ff5da0;
     --success : #1ecab8;
     --danger : #f1646c;
@@ -83,6 +84,8 @@ section.profile {
     align-items: center;
     padding: 3rem;
     margin-top: 60px;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 25% 100%, 0 80%);
+    padding-bottom: 4rem;
 }
 
 section.profile .left {
@@ -101,6 +104,15 @@ section.profile .left h2{
 section.profile .left p {
     color: var(--mild);
     font-size: 14px;
+}
+
+section.profile .left .cd-headline.loading-bar .cd-words-wrapper::after {
+    background: linear-gradient(to right, var(--secondary), var(--success));
+}
+
+section.profile .left p b {
+    padding-bottom: 1rem;
+    font-weight: 400;
 }
 
 section.profile .left img {
@@ -154,4 +166,39 @@ section.profile .right ul.contact li i {
 section.profile .right ul.socials {
     display: flex;
     align-items: center;
+    list-style-type: none;
+}
+
+section.profile .right ul.socials li {
+    margin-right:0.8rem ;
+}
+
+section.profile .right ul.socials li a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: var(--pure);
+    line-height: 36px;
+    text-align: center;
+}
+
+section.profile .right ul.contact li:nth-child(1) a {
+    background: var(--dark);
+    
+}
+
+section.profile .right ul.contact li:nth-child(2) a {
+    background: var(--linkin);
+    
+}
+
+section.profile .right ul.contact li:nth-child(3) a {
+    background: var(--secondary);
+    
+}
+
+section.profile .right ul.contact li:nth-child(4) a {
+    background: var(--danger);
+    
 }
